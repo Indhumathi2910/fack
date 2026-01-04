@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Click panna smooth-ah scroll aagum */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Style */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 5%;
+    color: white;
+    position: fixed; /* Screen top-la otti irukkum */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Sections Style - Ithu thaan screen-a full-ah eduthukkum */
+.page {
+    height: 100vh; /* Viewport Height: Full screen height */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Color differences - check panna easy-ah irukkum */
+#home { background-color:blue;
+color: aliceblue; }
+#about { background-color: brown ;
+color: aliceblue;}
+#contact { background-color:black;
+color: aliceblue; }
+
+/* Mobile Hamburger logic */
+@media (max-width: 768px) {
+    .hamburger { display: block; cursor: pointer; }
+    .bar { width: 25px; height: 3px; background: white; margin: 5px; }
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 60px;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        height: 100vh;
+        transition: 0.3s;
+    }
+    .nav-links.active { right: 0; }
+}

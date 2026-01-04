@@ -3,36 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css" >
+    <title>Professional Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <nav class="navbar">
-    <div class="logo">My Brand</div>
-    <ul class="nav-links" id="nav-links">
+
+    <nav class="navbar">
+        <div class="logo">MyBrand</div>
+        
+        <ul class="nav-links" id="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+
         <div class="hamburger" id="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
-    <section id="home" class="section">
-        <h1>Welcome to Home</h1>
-        <p>Ithu thaan namma main page content.</p>
-    </section>
-       <section id="about" class="page">
-        <h1>About Us</h1>
-        <p>Namma pathina details inga varum.</p>
-    </section>
+    </nav>
 
-    <section id="contact" class="page">
-        <h1>Contact Us</h1>
-        <p>Email: example@mail.com</p>
-    </section>
-   
-   <script src="index.js"></script>
+    <main>
+        <section id="home" class="full-page">
+            <div class="content">
+                <h1>Welcome to Our Home Page</h1>
+                <p>Ithu thaan namma main area. Inga neenga unga brand pathina mukkiyama vishayangala add pannalam. Ithula neraya content and images neenga vechukalam.</p>
+                <button class="btn">Learn More</button>
+            </div>
+        </section>
+
+        <section id="about" class="full-page">
+            <div class="content">
+                <h1>About Us</h1>
+                <p>Nanga yaaru? Enga team enna pannuvanga? Enga history enna nu ella details-um intha section-la full-ah varum. Professional-ah irukkum.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="full-page">
+            <div class="content">
+                <h1>Contact Us</h1>
+                <p>Engala contact panna: <strong>email@example.com</strong></p>
+                <p>Location: Chennai, Tamil Nadu.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>

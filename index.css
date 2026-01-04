@@ -2,28 +2,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
-    scroll-behavior: smooth; /* Click panna smooth-ah scroll aagum */
+    scroll-behavior: smooth; /* Smooth scroll effect */
 }
 
-body {
-    font-family: Arial, sans-serif;
-}
-
-/* Navbar Style */
+/* Navbar: Top-la fix panniyachi */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    padding: 15px 5%;
+    background-color: #1a1a1a;
     color: white;
-    position: fixed; /* Screen top-la otti irukkum */
-    width: 100%;
+    padding: 1rem 5%;
+    position: fixed;
     top: 0;
+    width: 100%;
     z-index: 1000;
+    height: 70px;
 }
 
 .nav-links {
@@ -34,41 +32,82 @@ body {
 .nav-links li a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 30px;
+    font-size: 1.1rem;
+    transition: 0.3s;
 }
 
-/* Sections Style - Ithu thaan screen-a full-ah eduthukkum */
-.page {
-    height: 100vh; /* Viewport Height: Full screen height */
+.nav-links li a:hover {
+    color: #ff4757;
+}
+
+/* Sections: Each section will be full screen */
+.full-page {
+    min-height: 100vh; /* Full screen height */
     width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    padding-top: 70px; /* Navbar height-ku gap */
 }
 
-/* Color differences - check panna easy-ah irukkum */
-#home { background-color:blue;
-color: aliceblue; }
-#about { background-color: brown ;
-color: aliceblue;}
-#contact { background-color:black;
-color: aliceblue; }
+.content {
+    max-width: 800px;
+    text-align: center;
+    padding: 20px;
+}
 
-/* Mobile Hamburger logic */
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Colors for visual difference */
+#home { background-color: #f1f2f6; color: #2f3542; }
+#about { background-color: #2f3542; color: white; }
+#contact { background-color: #dfe4ea; color: #2f3542; }
+
+/* Hamburger Menu (Hidden in Desktop) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* Responsive (Mobile View) */
 @media (max-width: 768px) {
-    .hamburger { display: block; cursor: pointer; }
-    .bar { width: 25px; height: 3px; background: white; margin: 5px; }
+    .hamburger { display: block; }
+
     .nav-links {
         position: fixed;
         right: -100%;
-        top: 60px;
-        flex-direction: column;
-        background-color: #333;
+        top: 70px;
+        background-color: #1a1a1a;
         width: 100%;
         height: 100vh;
-        transition: 0.3s;
+        flex-direction: column;
+        align-items: center;
+        transition: 0.5s;
     }
-    .nav-links.active { right: 0; }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 25px 0;
+    }
 }
